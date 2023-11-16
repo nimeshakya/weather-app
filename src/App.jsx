@@ -4,14 +4,15 @@ import React, { useEffect, useState } from 'react';
 
 import GlobalProvider from './context/GlobalContext';
 import Cities from './components/cities/Cities';
-import CitiesSelection from './components/cities/CitiesSelection';
-
 const App = () => {
     return (
         <>
             <GlobalProvider>
-                <Cities />
-                <CitiesSelection />
+                <div className='app-container'>
+                    <div className='app-components-container'>
+                        <Cities />
+                    </div>
+                </div>
             </GlobalProvider>
         </>
     );
