@@ -1,0 +1,74 @@
+@use '../../variables';
+
+.forecast-card {
+    width: 100%;
+    background-color: variables.$color-blue-3;
+    color: variables.$color-text-bright;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 10px 0;
+
+    .forecast-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-size: 1rem;
+            font-family: variables.$font-opensans;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 0.9rem;
+            font-family: variables.$font-opensans;
+        }
+    }
+
+    p {
+        font-family: variables.$font-roboto;
+    }
+
+    #current-time {
+        font-size: 0.8rem;
+        font-family: variables.$font-opensans;
+    }
+
+    .current-forecast {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 0 5px 0;
+
+        h2 {
+            font-size: 2.5rem;
+            font-family: variables.$font-roboto;
+            font-weight: 500;
+            margin: 0 10px;
+        }
+
+        .current-forecast-more-info {
+            margin-left: 10px;
+
+            p {
+                font-size: 0.9rem;
+                font-family: variables.$font-roboto;
+                font-weight: 300;
+
+                &:nth-child(1) {
+                    font-weight: 600;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    #current-temp-details {
+        font-size: 1rem;
+        font-family: variables.$font-opensans;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

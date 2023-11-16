@@ -1,0 +1,14 @@
+@use '../../variables';
+
+#city-searcher {
+    background-color: variables.$color-box-dark;
+    color: variables.$color-text-bright;
+    padding: 10px 20px;
+    border-radius: 69px;
+    width: 50%;
+    font-size: 1rem;
+}
+
+#city-searcher::placeholder {
+    color: variables.$color-text-dark;
+}
