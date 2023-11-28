@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 // import axios from 'axios';
 
-import GlobalProvider from './context/GlobalContext';
+import GlobalProvider, { useGlobalContext } from './context/GlobalContext';
 import Cities from './components/cities/Cities';
 import ForecastCard from './components/forecast_card/ForecastCard';
 const App = () => {

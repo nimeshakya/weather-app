@@ -1,0 +1,13 @@
+.forecast-info-container {
+    p {
+        &:nth-child(1) {
+            text-transform: capitalize;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        &:nth-child(2) {
+            font-weight: 300;
+        }
+    }
+}

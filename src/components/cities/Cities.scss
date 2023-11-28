@@ -1,7 +1,7 @@
 @use '../../variables';
 
 #city-searcher {
-    background-color: variables.$color-box-dark;
+    background-color: variables.$color-blue-3;
     color: variables.$color-text-bright;
     padding: 10px 20px;
     border-radius: 69px;
@@ -11,4 +11,8 @@
 
 #city-searcher::placeholder {
     color: variables.$color-text-dark;
+}
+
+#city-searcher::-webkit-search-cancel-button {
+    display: none;
 }

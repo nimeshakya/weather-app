@@ -64,10 +64,16 @@
         }
     }
 
+    .current-forecast-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     #current-temp-details {
         font-size: 1rem;
         font-family: variables.$font-opensans;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         display: flex;
         justify-content: space-between;
     }
