@@ -1,0 +1,49 @@
+@use '../../variables';
+
+.day-forecast-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .forecast-temp-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            flex-direction: column;
+            font-size: 1.2rem;
+        }
+    }
+    .forecast-weather-info {
+        flex-grow: 1;
+        display: none;
+    }
+    .forecast-weather-info-active {
+        height: 100%;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 10px;
+
+        p {
+            &:nth-child(1) {
+                font-weight: 300;
+                font-size: 1.2rem;
+            }
+
+            &:nth-child(2) {
+                font-size: 0.8rem;
+                font-weight: 400;
+                span {
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+}

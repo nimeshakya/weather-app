@@ -21,13 +21,12 @@ const GlobalProvider = ({ children }) => {
     const [currentWeather, setCurrentWeather] = useState({});
     const [weatherForecast, setWeatherForecast] = useState({});
     const [location, setLocation] = useState({});
-
-    const [city, setCity] = useState('bhaktapur');
+    const [city, setCity] = useState('bhaktapur'); // default bhaktapur but has not meaning of value as it'll check client's location
 
     // makes call for latide and longitude coordinates
     const makeCoordGeoPositionCall = async (lat, lng) => {
         if (!(lat === undefined || lng === undefined)) {
-            const url = `${baseUrl}&q=${lat},${lng}&days=1&aqi=no&alerts=no`;
+            const url = `${baseUrl}&q=${lat},${lng}&days=3&aqi=no&alerts=no`;
             try {
                 const response = await axios(url);
                 const data = await response.data;
