@@ -4,9 +4,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .forecast-temp-info {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         flex-grow: 1;
 
@@ -19,10 +20,12 @@
             font-size: 1.2rem;
         }
     }
+
     .forecast-weather-info {
         flex-grow: 1;
         display: none;
     }
+
     .forecast-weather-info-active {
         height: 100%;
         display: flex !important;

@@ -52,7 +52,7 @@ const DayForecast = ({ forecast, index, activeForecastIndex }) => {
                     }`}
                 >
                     <p>{forecast.day.condition.text}</p>
-                    <p>
+                    <p title='Precipitation'>
                         <span>
                             <FaDroplet />
                         </span>
