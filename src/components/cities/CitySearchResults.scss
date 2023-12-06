@@ -1,0 +1,29 @@
+@use '../../variables';
+
+.search-results {
+    width: 100%;
+    background-color: variables.$color-box-darker;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 100;
+
+    li {
+        padding: 10px 10px;
+        font-family: variables.$font-roboto;
+        color: variables.$color-text-dark;
+        line-height: 1.4rem;
+
+        &:hover {
+            background-color: variables.$color-box-dark;
+            cursor: pointer;
+        }
+
+        p {
+            &:nth-child(1) {
+                font-weight: 500;
+            }
+        }
+    }
+}

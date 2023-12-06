@@ -21,7 +21,7 @@ const GlobalProvider = ({ children }) => {
     const [currentWeather, setCurrentWeather] = useState({});
     const [weatherForecast, setWeatherForecast] = useState({});
     const [location, setLocation] = useState({});
-    const [city, setCity] = useState('bhaktapur'); // default bhaktapur but has not meaning of value as it'll check client's location
+    const [city, setCity] = useState({}); // default bhaktapur but has not meaning of value as it'll check client's location
 
     // makes call for latide and longitude coordinates
     const makeCoordGeoPositionCall = async (lat, lng) => {
@@ -41,6 +41,27 @@ const GlobalProvider = ({ children }) => {
                 console.log(error.response);
                 setLoading(false);
             }
+        }
+    };
+
+    // makes call for city name
+    const makeGeoNameCall = async (cityName) => {
+        setLoading(true);
+        const url = `${baseUrl}&q=${cityName}&days=3&api=no&alerts=no`;
+        console.log(url);
+        try {
+            const response = await axios(url);
+            const data = await response.data;
+            if (data) {
+                console.log(data);
+                setCurrentWeather(data.current);
+                setWeatherForecast(data.forecast);
+                setLocation(data.location);
+            }
+            setLoading(false);
+        } catch (error) {
+            console.log(error);
+            setLoading(false);
         }
     };
 
@@ -96,6 +117,13 @@ const GlobalProvider = ({ children }) => {
     useEffect(() => {
         fetchCurrentLocation();
     }, []);
+
+    useEffect(() => {
+        console.log(city);
+        if (Object.keys(city).length !== 0) {
+            makeCoordGeoPositionCall(city.lat, city.lon);
+        }
+    }, [city]);
 
     useEffect(() => {
         const newForecastInfo = [

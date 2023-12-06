@@ -1,18 +1,30 @@
 @use '../../variables';
 
-#city-searcher {
-    background-color: variables.$color-blue-3;
-    color: variables.$color-text-bright;
-    padding: 10px 20px;
-    border-radius: 69px;
+.city-searcher {
     width: 50%;
-    font-size: 1rem;
-}
+    position: relative;
 
-#city-searcher::placeholder {
-    color: variables.$color-text-dark;
-}
+    .city-searcher-input {
+        width: 100%;
+        background-color: variables.$color-blue-3;
+        color: variables.$color-text-bright;
+        padding: 10px 20px;
+        border-radius: 69px;
+        font-size: 1rem;
+    }
 
-#city-searcher::-webkit-search-cancel-button {
-    display: none;
+    .city-searcher-input::placeholder {
+        color: variables.$color-text-dark;
+    }
+
+    .city-searcher-input::-webkit-search-cancel-button {
+        display: none;
+    }
+
+    .city-searcher-with-result {
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
 }

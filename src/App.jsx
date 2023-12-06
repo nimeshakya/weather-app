@@ -23,10 +23,6 @@ const App = () => {
         setActiveForecastIndex(index);
     };
 
-    useEffect(() => {
-        console.log(activeForecastIndex);
-    }, [activeForecastIndex]);
-
     return (
         <>
             <div className='app-container'>
