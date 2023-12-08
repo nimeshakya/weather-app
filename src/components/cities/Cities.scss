@@ -28,3 +28,9 @@
         border-bottom-right-radius: 0px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .city-searcher {
+        width: 100%;
+    }
+}
