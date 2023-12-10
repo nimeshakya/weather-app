@@ -78,3 +78,30 @@
         justify-content: space-between;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .forecast-card {
+        .current-forecast {
+            justify-content: center;
+            flex-direction: column;
+            margin: 20px 0;
+
+            img {
+                width: 25%;
+            }
+            h2 {
+                font-size: 3rem;
+            }
+            .current-forecast-more-info {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+        .current-forecast-info {
+            padding: 0 40px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
