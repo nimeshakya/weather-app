@@ -81,6 +81,15 @@
 
 @media screen and (max-width: 600px) {
     .forecast-card {
+        .forecast-card-header {
+            h1 {
+                flex: 50%;
+            }
+            p {
+                flex: 50%;
+            }
+        }
+
         .current-forecast {
             justify-content: center;
             flex-direction: column;
