@@ -1,0 +1,7 @@
+@use '../../variables';
+
+h2 {
+    color: variables.$color-text-dark;
+    font-family: variables.$font-roboto;
+    margin: 20px 0;
+}
